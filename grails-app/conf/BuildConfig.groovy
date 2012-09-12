@@ -29,6 +29,12 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.5'
     }
     plugins {
+        build(":tomcat:$grailsVersion",
+              ":release:2.0.3",
+              ":rest-client-builder:1.0.2") {
+            export = false
+        }
+
         compile ":resources:1.1.6"
         compile ":cache-headers:1.0.4"
     }
